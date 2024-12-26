@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI-Generated Website Code Comparison</title>
+        <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Inter", "system-ui", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+        />
+    </head>
+    <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="fixed top-4 right-4 p-2 text-2xl">
+            <i class="fas fa-sun hidden dark:block"></i>
+            <i class="fas fa-moon dark:hidden"></i>
+        </button>
+
+        <div class="container mx-auto px-4 py-16 max-w-2xl">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">
+                    AI-Generated Website Code Comparison
+                </h1>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Compare different AI-generated implementations of the same
+                    website.
+                </p>
+            </div>
+
+            <!-- Documentation -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-semibold mb-4">Documentation</h2>
+                <div class="space-y-4">
+                    <a
+                        href="README.md"
+                        class="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                    >
+                        <div class="flex items-center">
+                            <i class="fas fa-book mr-4 text-blue-500"></i>
+                            <div>
+                                <h3 class="font-semibold">README.md</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">
+                                    Project documentation and overview
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="https://github.com/unlimitedbytes/ai-compare"
+                        class="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                    >
+                        <div class="flex items-center">
+                            <i class="fab fa-github mr-4 text-gray-700 dark:text-gray-300"></i>
+                            <div>
+                                <h3 class="font-semibold">GitHub Repository</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">
+                                    View source code and contribute
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Human Prompt Implementations -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-semibold mb-4">Human Prompt</h2>
+                <div class="space-y-4">
+                    <a
+                        href="my-prompt/claude.html"
+                        class="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                    >
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-4 text-purple-500"></i>
+                            <div>
+                                <h3 class="font-semibold">
+                                    Claude 3.5 Implementation
+                                </h3>
+                                <p
+                                    class="text-sm text-gray-600 dark:text-gray-400"
+                                >
+                                    Using original human prompt
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="my-prompt/chatgpt.html"
+                        class="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                    >
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-4 text-green-500"></i>
+                            <div>
+                                <h3 class="font-semibold">
+                                    ChatGPT Implementation
+                                </h3>
+                                <p
+                                    class="text-sm text-gray-600 dark:text-gray-400"
+                                >
+                                    Using original human prompt
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="my-prompt/deepseek.html"
+                        class="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                    >
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-4 text-blue-500"></i>
+                            <div>
+                                <h3 class="font-semibold">
+                                    DeepSeek Implementation
+                                </h3>
+                                <p
+                                    class="text-sm text-gray-600 dark:text-gray-400"
+                                >
+                                    Using original human prompt
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ChatGPT Enhanced Prompt -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-semibold mb-4">
+                    ChatGPT Enhanced Prompt
+                </h2>
+                <div class="space-y-4">
+                    <a
+                        href="chatgpt-prompt/claude.html"
+                        class="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                    >
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-4 text-purple-500"></i>
+                            <div>
+                                <h3 class="font-semibold">
+                                    Claude 3.5 Implementation
+                                </h3>
+                                <p
+                                    class="text-sm text-gray-600 dark:text-gray-400"
+                                >
+                                    Using ChatGPT-enhanced prompt
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="chatgpt-prompt/chatgpt.html"
+                        class="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                    >
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-4 text-green-500"></i>
+                            <div>
+                                <h3 class="font-semibold">
+                                    ChatGPT Implementation
+                                </h3>
+                                <p
+                                    class="text-sm text-gray-600 dark:text-gray-400"
+                                >
+                                    Using ChatGPT-enhanced prompt
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="chatgpt-prompt/deepseek.html"
+                        class="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                    >
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-4 text-blue-500"></i>
+                            <div>
+                                <h3 class="font-semibold">
+                                    DeepSeek Implementation
+                                </h3>
+                                <p
+                                    class="text-sm text-gray-600 dark:text-gray-400"
+                                >
+                                    Using ChatGPT-enhanced prompt
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- DeepSeek Enhanced Prompt -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-semibold mb-4">
+                    DeepSeek Enhanced Prompt
+                </h2>
+                <div class="space-y-4">
+                    <a
+                        href="deepseek-prompt/claude.html"
+                        class="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                    >
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-4 text-purple-500"></i>
+                            <div>
+                                <h3 class="font-semibold">
+                                    Claude 3.5 Implementation
+                                </h3>
+                                <p
+                                    class="text-sm text-gray-600 dark:text-gray-400"
+                                >
+                                    Using DeepSeek-enhanced prompt
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="deepseek-prompt/chatgpt.html"
+                        class="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                    >
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-4 text-green-500"></i>
+                            <div>
+                                <h3 class="font-semibold">
+                                    ChatGPT Implementation
+                                </h3>
+                                <p
+                                    class="text-sm text-gray-600 dark:text-gray-400"
+                                >
+                                    Using DeepSeek-enhanced prompt
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="deepseek-prompt/deepseek.html"
+                        class="block p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
+                    >
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-4 text-blue-500"></i>
+                            <div>
+                                <h3 class="font-semibold">
+                                    DeepSeek Implementation
+                                </h3>
+                                <p
+                                    class="text-sm text-gray-600 dark:text-gray-400"
+                                >
+                                    Using DeepSeek-enhanced prompt
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Theme toggle functionality
+            const themeToggle = document.getElementById("themeToggle");
+
+            // Check for saved theme preference or use system preference
+            if (
+                localStorage.theme === "dark" ||
+                (!("theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                document.documentElement.classList.add("dark");
+            }
+
+            // Toggle theme
+            themeToggle.addEventListener("click", () => {
+                document.documentElement.classList.toggle("dark");
+                localStorage.theme =
+                    document.documentElement.classList.contains("dark")
+                        ? "dark"
+                        : "light";
+            });
+        </script>
+    </body>
+</html>
