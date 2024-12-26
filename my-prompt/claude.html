@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLDIE AGENCY PTE. LTD. - Premier SEO Services</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        seasalt: { DEFAULT: '#F6F9FA', 100: '#233940', 200: '#467180', 300: '#75a4b3', 400: '#b5ced6', 500: '#f6f9fa', 600: '#f7fafb', 700: '#f9fbfc', 800: '#fbfcfd', 900: '#fdfefe' },
+                        french_gray: { DEFAULT: '#AFB1B9', 100: '#222327', 200: '#43454d', 300: '#656874', 400: '#898c99', 500: '#afb1b9', 600: '#c0c1c8', 700: '#d0d1d6', 800: '#dfe0e3', 900: '#eff0f1' },
+                        white: { DEFAULT: '#FFFFFF', 100: '#333333', 200: '#666666', 300: '#999999', 400: '#cccccc', 500: '#ffffff', 600: '#ffffff', 700: '#ffffff', 800: '#ffffff', 900: '#ffffff' },
+                        raisin_black: { DEFAULT: '#322F40', 100: '#0a0a0d', 200: '#14131a', 300: '#1e1d27', 400: '#292634', 500: '#322f40', 600: '#57516e', 700: '#7c769a', 800: '#a8a4bb', 900: '#d3d1dd' },
+                        dodger_blue: { DEFAULT: '#2791F3', 100: '#031d35', 200: '#063a6a', 300: '#09579f', 400: '#0c74d4', 500: '#2791f3', 600: '#51a6f5', 700: '#7dbcf7', 800: '#a8d2fa', 900: '#d4e9fc' }
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'roboto': ['Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="font-poppins antialiased">
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="fixed top-4 right-4 z-50 p-2 rounded-full bg-raisin_black dark:bg-white text-white dark:text-raisin_black">
+        <span class="iconify w-6 h-6" data-icon="ph:sun-bold"></span>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-gradient-to-br from-seasalt to-french_gray dark:from-raisin_black-200 dark:to-raisin_black-400">
+        <div class="container mx-auto px-4 h-full flex items-center">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-6xl font-bold text-raisin_black dark:text-white mb-6">
+                    Transform Your Digital Presence with Expert SEO
+                </h1>
+                <p class="text-xl text-raisin_black-600 dark:text-french_gray-400 mb-8">
+                    Boost your visibility, drive organic traffic, and achieve sustainable growth with our data-driven SEO strategies.
+                </p>
+                <a href="#contact" class="inline-block bg-dodger_blue hover:bg-dodger_blue-600 text-white px-8 py-4 rounded-lg transition-colors">
+                    Get Free Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white dark:bg-raisin_black-300">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-raisin_black dark:text-white mb-16">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="p-6 bg-seasalt dark:bg-raisin_black-400 rounded-lg">
+                    <span class="iconify w-12 h-12 text-dodger_blue mb-4" data-icon="ph:magnifying-glass-bold"></span>
+                    <h3 class="text-xl font-bold text-raisin_black dark:text-white mb-3">Technical SEO</h3>
+                    <p class="text-raisin_black-600 dark:text-french_gray-400">Optimize your website's technical foundation for better search engine visibility and performance.</p>
+                </div>
+                <div class="p-6 bg-seasalt dark:bg-raisin_black-400 rounded-lg">
+                    <span class="iconify w-12 h-12 text-dodger_blue mb-4" data-icon="ph:chart-line-up-bold"></span>
+                    <h3 class="text-xl font-bold text-raisin_black dark:text-white mb-3">On-Page SEO</h3>
+                    <p class="text-raisin_black-600 dark:text-french_gray-400">Optimize your content and structure for maximum search engine visibility and user engagement.</p>
+                </div>
+                <div class="p-6 bg-seasalt dark:bg-raisin_black-400 rounded-lg">
+                    <span class="iconify w-12 h-12 text-dodger_blue mb-4" data-icon="ph:link-bold"></span>
+                    <h3 class="text-xl font-bold text-raisin_black dark:text-white mb-3">Link Building</h3>
+                    <p class="text-raisin_black-600 dark:text-french_gray-400">Build high-quality backlinks to boost your domain authority and search rankings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-seasalt dark:bg-raisin_black-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-raisin_black dark:text-white mb-16">Our Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Items -->
+                <div class="group relative overflow-hidden rounded-lg">
+                    <img src="https://placehold.co/600x400" alt="Project 1" class="w-full">
+                    <div class="absolute inset-0 bg-dodger_blue bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">E-commerce SEO</h3>
+                            <p>300% increase in organic traffic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg">
+                    <img src="https://placehold.co/600x400" alt="Project 2" class="w-full">
+                    <div class="absolute inset-0 bg-dodger_blue bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Local Business SEO</h3>
+                            <p>First page rankings for 50+ keywords</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg">
+                    <img src="https://placehold.co/600x400" alt="Project 3" class="w-full">
+                    <div class="absolute inset-0 bg-dodger_blue bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">SaaS SEO Strategy</h3>
+                            <p>200% increase in qualified leads</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white dark:bg-raisin_black-300">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-raisin_black dark:text-white mb-16">Client Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-seasalt dark:bg-raisin_black-400 rounded-lg">
+                    <img src="https://avatar.iran.liara.run/public?seed=client1" alt="Client 1" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="text-raisin_black-600 dark:text-french_gray-400 text-center mb-4">"Outstanding results! Our organic traffic increased by 200% within 6 months."</p>
+                    <h4 class="text-lg font-bold text-raisin_black dark:text-white text-center">John Smith</h4>
+                    <p class="text-french_gray text-center">CEO, TechCorp</p>
+                </div>
+                <div class="p-6 bg-seasalt dark:bg-raisin_black-400 rounded-lg">
+                    <img src="https://avatar.iran.liara.run/public?seed=client2" alt="Client 2" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="text-raisin_black-600 dark:text-french_gray-400 text-center mb-4">"The SEO expertise at Goldie Agency transformed our online presence completely."</p>
+                    <h4 class="text-lg font-bold text-raisin_black dark:text-white text-center">Sarah Johnson</h4>
+                    <p class="text-french_gray text-center">Marketing Director, WebSolutions</p>
+                </div>
+                <div class="p-6 bg-seasalt dark:bg-raisin_black-400 rounded-lg">
+                    <img src="https://avatar.iran.liara.run/public?seed=client3" alt="Client 3" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="text-raisin_black-600 dark:text-french_gray-400 text-center mb-4">"Professional, responsive, and delivered beyond our expectations."</p>
+                    <h4 class="text-lg font-bold text-raisin_black dark:text-white text-center">Michael Chen</h4>
+                    <p class="text-french_gray text-center">Founder, GrowthX</p>
+                </div>
+                <div class="p-6 bg-seasalt dark:bg-raisin_black-400 rounded-lg">
+                    <img src="https://avatar.iran.liara.run/public?seed=client4" alt="Client 4" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="text-raisin_black-600 dark:text-french_gray-400 text-center mb-4">"Their strategic approach to SEO helped us rank #1 for our target keywords."</p>
+                    <h4 class="text-lg font-bold text-raisin_black dark:text-white text-center">Emily Parker</h4>
+                    <p class="text-french_gray text-center">CMO, Digital First</p>
+                </div>
+                <div class="p-6 bg-seasalt dark:bg-raisin_black-400 rounded-lg">
+                    <img src="https://avatar.iran.liara.run/public?seed=client5" alt="Client 5" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="text-raisin_black-600 dark:text-french_gray-400 text-center mb-4">"Exceptional ROI and consistent improvement in our search rankings."</p>
+                    <h4 class="text-lg font-bold text-raisin_black dark:text-white text-center">David Wong</h4>
+                    <p class="text-french_gray text-center">Owner, E-Commerce Plus</p>
+                </div>
+                <div class="p-6 bg-seasalt dark:bg-raisin_black-400 rounded-lg">
+                    <img src="https://avatar.iran.liara.run/public?seed=client6" alt="Client 6" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="text-raisin_black-600 dark:text-french_gray-400 text-center mb-4">"Goldie Agency's SEO strategies doubled our conversion rate in just 3 months."</p>
+                    <h4 class="text-lg font-bold text-raisin_black dark:text-white text-center">Anna Martinez</h4>
+                    <p class="text-french_gray text-center">Director, Global Solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-seasalt dark:bg-raisin_black-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-raisin_black dark:text-white mb-16">Contact Us</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label class="block text-raisin_black dark:text-white mb-2">Name</label>
+                        <input type="text" required class="w-full px-4 py-2 rounded-lg border border-french_gray-300 dark:border-raisin_black-400 bg-white dark:bg-raisin_black-400">
+                    </div>
+                    <div>
+                        <label class="block text-raisin_black dark:text-white mb-2">Email</label>
+                        <input type="email" required class="w-full px-4 py-2 rounded-lg border border-french_gray-300 dark:border-raisin_black-400 bg-white dark:bg-raisin_black-400">
+                    </div>
+                    <div>
+                        <label class="block text-raisin_black dark:text-white mb-2">Message</label>
+                        <textarea required rows="4" class="w-full px-4 py-2 rounded-lg border border-french_gray-300 dark:border-raisin_black-400 bg-white dark:bg-raisin_black-400"></textarea>
+                    </div>
+                    <button type="submit" class="bg-dodger_blue hover:bg-dodger_blue-600 text-white px-8 py-4 rounded-lg transition-colors">Send Message</button>
+                </form>
+                <div id="map" class="h-[400px] bg-french_gray-200 rounded-lg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-raisin_black dark:bg-raisin_black-100 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">GOLDIE AGENCY</h3>
+                    <p class="text-french_gray-400">Your trusted partner in SEO excellence.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-french_gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#portfolio" class="text-french_gray-400 hover:text-white">Portfolio</a></li>
+                        <li><a href="#contact" class="text-french_gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-french_gray-400 hover:text-white"><span class="iconify w-6 h-6" data-icon="ph:facebook-logo-bold"></span></a>
+                        <a href="#" class="text-french_gray-400 hover:text-white"><span class="iconify w-6 h-6" data-icon="ph:twitter-logo-bold"></span></a>
+                        <a href="#" class="text-french_gray-400 hover:text-white"><span class="iconify w-6 h-6" data-icon="ph:linkedin-logo-bold"></span></a>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-bold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" data-modal="privacyModal" class="text-french_gray-400 hover:text-white">Privacy Policy</a></li>
+                            <li><a href="#" data-modal="termsModal" class="text-french_gray-400 hover:text-white">Terms of Service</a></li>
+                            <li><a href="#" data-modal="cookiesModal" class="text-french_gray-400 hover:text-white">Cookie Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-raisin_black-400 mt-8 pt-8 text-center">
+                <p class="text-french_gray-400">&copy; 2024 GOLDIE AGENCY PTE. LTD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content bg-white dark:bg-raisin_black-300 p-8 max-w-2xl mx-auto mt-20 rounded-lg">
+            <h2 class="text-2xl font-bold text-raisin_black dark:text-white mb-4">Privacy Policy</h2>
+            <div class="text-raisin_black-600 dark:text-french_gray-300">
+                <p class="mb-4">At GOLDIE AGENCY, we take your privacy seriously. This policy describes how we collect, use, and protect your personal information.</p>
+                <h3 class="text-xl font-bold text-raisin_black dark:text-white mb-2">Information Collection</h3>
+                <p class="mb-4">We collect information that you provide directly to us, including name, email, and message content through our contact form.</p>
+                <h3 class="text-xl font-bold text-raisin_black dark:text-white mb-2">Use of Information</h3>
+                <p class="mb-4">We use your information to respond to your inquiries and provide our services.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content bg-white dark:bg-raisin_black-300 p-8 max-w-2xl mx-auto mt-20 rounded-lg">
+            <h2 class="text-2xl font-bold text-raisin_black dark:text-white mb-4">Terms of Service</h2>
+            <div class="text-raisin_black dark:text-french_gray-400">
+                <p class="mb-4">By using GOLDIE AGENCY's services, you agree to these terms.</p>
+                <h3 class="text-xl font-bold mb-2">Service Agreement</h3>
+                <p class="mb-4">We provide SEO and digital marketing services subject to your compliance with these terms.</p>
+                <h3 class="text-xl font-bold mb-2">Limitations</h3>
+                <p class="mb-4">We make no guarantees about specific rankings or results from our services.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookiesModal" class="modal">
+        <div class="modal-content bg-white dark:bg-raisin_black-300 p-8 max-w-2xl mx-auto mt-20 rounded-lg">
+            <h2 class="text-2xl font-bold text-raisin_black dark:text-white mb-4">Cookie Settings</h2>
+            <div class="text-raisin_black dark:text-french_gray-400">
+                <p class="mb-4">We use cookies to enhance your browsing experience.</p>
+                <h3 class="text-xl font-bold mb-2">Essential Cookies</h3>
+                <p class="mb-4">These are necessary for the website to function and cannot be disabled.</p>
+                <h3 class="text-xl font-bold mb-2">Analytics Cookies</h3>
+                <p class="mb-4">Help us understand how visitors interact with our website.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('themeToggle');
+        
+        function setTheme(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                themeToggle.innerHTML = '<span class="iconify w-6 h-6" data-icon="ph:moon-bold"></span>';
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                themeToggle.innerHTML = '<span class="iconify w-6 h-6" data-icon="ph:sun-bold"></span>';
+            }
+        }
+
+        // Initialize theme
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setTheme(true);
+        } else {
+            setTheme(false);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            setTheme(!document.documentElement.classList.contains('dark'));
+        });
+
+        // Modal Logic
+        const modals = document.querySelectorAll('.modal');
+        const modalTriggers = document.querySelectorAll('[data-modal]');
+
+        modalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                const modalId = trigger.getAttribute('data-modal');
+                document.getElementById(modalId).style.display = 'block';
+            });
+        });
+
+        modals.forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        // Form Validation
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Add form validation and submission logic here
+            });
+        }
+
+    const GOOGLE_MAPS_API_KEY = 'AIzaSyDy3NduCSea7KbTdabDxRkWklCxK_dmJtY';
+
+    // Load Google Maps script dynamically
+    function loadGoogleMapsScript() {
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&callback=initMap`;
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+    }
+
+    // Initialize Google Maps
+    function initMap() {
+        // Singapore coordinates (default location)
+        const location = { lat: 1.3521, lng: 103.8198 };
+        
+        const map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: location,
+            styles: [
+                {
+                    featureType: 'all',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#242f3e' }]
+                },
+                {
+                    featureType: 'all',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{ color: '#242f3e' }]
+                },
+                {
+                    featureType: 'all',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#746855' }]
+                }
+            ]
+        });
+
+        // Add marker
+        const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            title: 'GOLDIE AGENCY PTE. LTD.'
+        });
+    }
+
+    // Load Google Maps when the page is ready
+    document.addEventListener('DOMContentLoaded', loadGoogleMapsScript);
+    </script>
+</body>
+</html>

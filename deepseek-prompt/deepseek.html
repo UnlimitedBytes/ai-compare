@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goldie Agency Pte. Ltd.</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            seasalt: { DEFAULT: '#F6F9FA', 100: '#233940', 200: '#467180', 300: '#75a4b3', 400: '#b5ced6', 500: '#f6f9fa', 600: '#f7fafb', 700: '#f9fbfc', 800: '#fbfcfd', 900: '#fdfefe' },
+            french_gray: { DEFAULT: '#AFB1B9', 100: '#222327', 200: '#43454d', 300: '#656874', 400: '#898c99', 500: '#afb1b9', 600: '#c0c1c8', 700: '#d0d1d6', 800: '#dfe0e3', 900: '#eff0f1' },
+            white: { DEFAULT: '#FFFFFF', 100: '#333333', 200: '#666666', 300: '#999999', 400: '#cccccc', 500: '#ffffff', 600: '#ffffff', 700: '#ffffff', 800: '#ffffff', 900: '#ffffff' },
+            raisin_black: { DEFAULT: '#322F40', 100: '#0a0a0d', 200: '#14131a', 300: '#1e1d27', 400: '#292634', 500: '#322f40', 600: '#57516e', 700: '#7c769a', 800: '#a8a4bb', 900: '#d3d1dd' },
+            dodger_blue: { DEFAULT: '#2791F3', 100: '#031d35', 200: '#063a6a', 300: '#09579f', 400: '#0c74d4', 500: '#2791f3', 600: '#51a6f5', 700: '#7dbcf7', 800: '#a8d2fa', 900: '#d4e9fc' }
+          },
+          fontFamily: {
+            roboto: ['Roboto', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .dark body {
+      background-color: #322F40;
+      color: #F6F9FA;
+    }
+  </style>
+</head>
+<body class="bg-seasalt-500 text-raisin_black-500">
+  <!-- Hero Section -->
+  <section class="bg-[url('https://placehold.co/1600x900')] bg-cover bg-center h-screen flex items-center justify-center text-center">
+    <div class="bg-white/75 dark:bg-raisin_black-500/75 p-8 rounded-lg">
+      <h1 class="text-5xl font-bold mb-4">Welcome to Goldie Agency</h1>
+      <p class="text-xl mb-8">Your trusted partner in innovative solutions.</p>
+      <a href="#contact" class="bg-dodger_blue-500 text-white px-6 py-3 rounded-lg hover:bg-dodger_blue-600">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <span class="iconify text-6xl mb-4" data-icon="mdi:web"></span>
+          <h3 class="text-xl font-bold mb-2">Web Development</h3>
+          <p>We create responsive and user-friendly websites tailored to your needs.</p>
+        </div>
+        <div class="text-center">
+          <span class="iconify text-6xl mb-4" data-icon="mdi:chart-bar"></span>
+          <h3 class="text-xl font-bold mb-2">Digital Marketing</h3>
+          <p>Boost your online presence with our strategic marketing solutions.</p>
+        </div>
+        <div class="text-center">
+          <span class="iconify text-6xl mb-4" data-icon="mdi:brush"></span>
+          <h3 class="text-xl font-bold mb-2">Graphic Design</h3>
+          <p>Captivating designs that leave a lasting impression.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="py-16 px-4 bg-french_gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Our Portfolio</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-raisin_black-500 p-4 rounded-lg shadow-lg">
+          <img src="https://placehold.co/600x400" alt="Project 1" class="rounded-lg mb-4">
+          <h3 class="text-xl font-bold mb-2">Project 1</h3>
+          <p>Description of the project goes here.</p>
+        </div>
+        <div class="bg-white dark:bg-raisin_black-500 p-4 rounded-lg shadow-lg">
+          <img src="https://placehold.co/600x400" alt="Project 2" class="rounded-lg mb-4">
+          <h3 class="text-xl font-bold mb-2">Project 2</h3>
+          <p>Description of the project goes here.</p>
+        </div>
+        <div class="bg-white dark:bg-raisin_black-500 p-4 rounded-lg shadow-lg">
+          <img src="https://placehold.co/600x400" alt="Project 3" class="rounded-lg mb-4">
+          <h3 class="text-xl font-bold mb-2">Project 3</h3>
+          <p>Description of the project goes here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <img src="https://avatar.iran.liara.run/public/1" alt="Client 1" class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h3 class="text-xl font-bold mb-2">John Doe</h3>
+          <p>"Goldie Agency delivered beyond our expectations. Highly recommended!"</p>
+        </div>
+        <div class="text-center">
+          <img src="https://avatar.iran.liara.run/public/2" alt="Client 2" class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h3 class="text-xl font-bold mb-2">Jane Smith</h3>
+          <p>"Professional, reliable, and creative. A pleasure to work with."</p>
+        </div>
+        <div class="text-center">
+          <img src="https://avatar.iran.liara.run/public/3" alt="Client 3" class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h3 class="text-xl font-bold mb-2">Mike Johnson</h3>
+          <p>"Their digital marketing strategies transformed our business."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-4 bg-french_gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <form class="bg-white dark:bg-raisin_black-500 p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+              <label for="name" class="block mb-2">Name</label>
+              <input type="text" id="name" class="w-full p-2 border rounded-lg" required>
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block mb-2">Email</label>
+              <input type="email" id="email" class="w-full p-2 border rounded-lg" required>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block mb-2">Message</label>
+              <textarea id="message" class="w-full p-2 border rounded-lg" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="bg-dodger_blue-500 text-white px-6 py-3 rounded-lg hover:bg-dodger_blue-600">Send Message</button>
+          </form>
+        </div>
+        <div>
+          <div class="bg-white dark:bg-raisin_black-500 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-4">Our Location</h3>
+            <div id="map" class="h-64 mb-4 rounded-lg"></div>
+            <p class="mb-2">123 Business Street, Singapore</p>
+            <p class="mb-2">Email: info@goldieagency.com</p>
+            <p class="mb-2">Phone: +65 1234 5678</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="py-8 px-4 bg-raisin_black-500 text-white">
+    <div class="container mx-auto text-center">
+      <div class="mb-4">
+        <img src="https://placehold.co/150x50" alt="Goldie Agency Logo" class="mx-auto">
+      </div>
+      <div class="mb-4">
+        <a href="#" class="mx-2 hover:text-dodger_blue-500">Privacy Policy</a>
+        <a href="#" class="mx-2 hover:text-dodger_blue-500">Terms of Service</a>
+        <a href="#" class="mx-2 hover:text-dodger_blue-500">Refund Policy</a>
+        <a href="#" class="mx-2 hover:text-dodger_blue-500">Returns Policy</a>
+        <a href="#" class="mx-2 hover:text-dodger_blue-500">Cookies Settings</a>
+      </div>
+      <div class="mb-4">
+        <a href="#" class="mx-2 hover:text-dodger_blue-500"><span class="iconify" data-icon="mdi:facebook"></span></a>
+        <a href="#" class="mx-2 hover:text-dodger_blue-500"><span class="iconify" data-icon="mdi:twitter"></span></a>
+        <a href="#" class="mx-2 hover:text-dodger_blue-500"><span class="iconify" data-icon="mdi:linkedin"></span></a>
+        <a href="#" class="mx-2 hover:text-dodger_blue-500"><span class="iconify" data-icon="mdi:instagram"></span></a>
+      </div>
+      <p>&copy; 2023 Goldie Agency Pte. Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Dark/Light Mode and Map -->
+  <script>
+    // Dark/Light Mode Toggle
+    const toggleDarkMode = () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    };
+
+    // Set initial theme based on user preference
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+
+    // Google Maps Integration
+    function initMap() {
+      const location = { lat: 1.3521, lng: 103.8198 }; // Singapore coordinates
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: location
+      });
+      new google.maps.Marker({ position: location, map });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Goldie Agency - Your trusted partner in web development, digital marketing, and graphic design solutions">
+  <title>Goldie Agency Pte. Ltd.</title>
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" as="style">
+  <link rel="preload" href="https://cdn.tailwindcss.com/3.4.16" as="script">
+  
+  <!-- Stylesheets -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js" defer></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            seasalt: { DEFAULT: '#F6F9FA', 100: '#233940', 200: '#467180', 300: '#75a4b3', 400: '#b5ced6', 500: '#f6f9fa', 600: '#f7fafb', 700: '#f9fbfc', 800: '#fbfcfd', 900: '#fdfefe' },
+            french_gray: { DEFAULT: '#AFB1B9', 100: '#222327', 200: '#43454d', 300: '#656874', 400: '#898c99', 500: '#afb1b9', 600: '#c0c1c8', 700: '#d0d1d6', 800: '#dfe0e3', 900: '#eff0f1' },
+            white: { DEFAULT: '#FFFFFF', 100: '#333333', 200: '#666666', 300: '#999999', 400: '#cccccc', 500: '#ffffff', 600: '#ffffff', 700: '#ffffff', 800: '#ffffff', 900: '#ffffff' },
+            raisin_black: { DEFAULT: '#322F40', 100: '#0a0a0d', 200: '#14131a', 300: '#1e1d27', 400: '#292634', 500: '#322f40', 600: '#57516e', 700: '#7c769a', 800: '#a8a4bb', 900: '#d3d1dd' },
+            dodger_blue: { DEFAULT: '#2791F3', 100: '#031d35', 200: '#063a6a', 300: '#09579f', 400: '#0c74d4', 500: '#2791f3', 600: '#51a6f5', 700: '#7dbcf7', 800: '#a8d2fa', 900: '#d4e9fc' }
+          },
+          fontFamily: {
+            roboto: ['Roboto', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Base Styles -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .dark body {
+      background-color: #322F40;
+      color: #F6F9FA;
+    }
+    .transition-colors {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .lazy-image {
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+    }
+    .lazy-image.loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-seasalt-500 text-raisin_black-500 transition-colors">
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white/90 dark:bg-raisin_black-500/90 backdrop-blur-sm z-50 transition-colors">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold">Goldie Agency</a>
+      <div class="flex items-center gap-6">
+        <a href="#services" class="hover:text-dodger_blue-500 transition-colors">Services</a>
+        <a href="#portfolio" class="hover:text-dodger_blue-500 transition-colors">Portfolio</a>
+        <a href="#testimonials" class="hover:text-dodger_blue-500 transition-colors">Testimonials</a>
+        <a href="#contact" class="bg-dodger_blue-500 text-white px-4 py-2 rounded-lg hover:bg-dodger_blue-600 transition-colors">Contact</a>
+        <button onclick="toggleDarkMode()" class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-raisin_black-400 transition-colors">
+          <span class="iconify dark:hidden" data-icon="mdi:moon"></span>
+          <span class="iconify hidden dark:inline" data-icon="mdi:sun"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen flex items-center justify-center text-center">
+    <div class="absolute inset-0 z-0">
+      <img src="https://placehold.co/1600x900" alt="Hero background" class="w-full h-full object-cover lazy-image">
+    </div>
+    <div class="relative z-10 bg-white/75 dark:bg-raisin_black-500/75 p-8 rounded-lg backdrop-blur-sm transition-colors">
+      <h1 class="text-5xl font-bold mb-4">Welcome to Goldie Agency</h1>
+      <p class="text-xl mb-8">Your trusted partner in innovative solutions.</p>
+      <a href="#contact" class="inline-block bg-dodger_blue-500 text-white px-6 py-3 rounded-lg hover:bg-dodger_blue-600 transition-colors">
+        Get Started
+        <span class="iconify inline-block ml-2" data-icon="mdi:arrow-right"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Remaining sections with enhanced features... -->
+
+  <!-- Enhanced JavaScript -->
+  <script>
+    // Lazy Loading Images
+    document.addEventListener('DOMContentLoaded', () => {
+      const lazyImages = document.querySelectorAll('.lazy-image');
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('loaded');
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      
+      lazyImages.forEach(img => imageObserver.observe(img));
+    });
+
+    // Enhanced Dark Mode Toggle with Animation
+    const toggleDarkMode = () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', 
+        document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+      );
+    };
+
+    // Initialize theme
+    if (localStorage.getItem('theme') === 'dark' || 
+        (!('theme' in localStorage) && 
+         window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+
+    // Form validation and submission
+    const contactForm = document.querySelector('#contact form');
+    contactForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(contactForm);
+      try {
+        // Add your form submission logic here
+        console.log(Object.fromEntries(formData));
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      }
+    });
+
+    // Google Maps with error handling
+    function initMap() {
+      try {
+        const location = { lat: 1.3521, lng: 103.8198 };
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: location,
+          styles: document.documentElement.classList.contains('dark') ? darkMapStyle : [],
+        });
+        new google.maps.Marker({ position: location, map });
+      } catch (error) {
+        console.error('Error initializing map:', error);
+        document.getElementById('map').innerHTML = 
+          '<p class="text-center p-4">Map loading failed. Please try again later.</p>';
+      }
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>

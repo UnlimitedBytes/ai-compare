@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="description" content="SEO & Digital Marketing Services by GOLDIE AGENCY PTE. LTD." />
+  <meta name="keywords" content="SEO, marketing, digital marketing, GOLDIE AGENCY PTE. LTD." />
+  <meta name="author" content="GOLDIE AGENCY PTE. LTD." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+
+  <!-- Iconify Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"></script>
+
+  <!-- Custom Colors Configuration (Optional Tailwind Configuration Approach) -->
+  <script>
+    // Here, you could add a custom Tailwind config if needed, but we'll just use inline classes for simplicity.
+  </script>
+
+  <!-- 
+    * BLOCKING JavaScript: Load user's preferred color scheme.
+    * This script executes before rendering to avoid FOUC (Flash Of Unstyled Content).
+  -->
+  <script>
+    (function() {
+      // Check localStorage for color scheme preference
+      var preferredScheme = localStorage.getItem('colorScheme') || 'light';
+      if (preferredScheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
+  <title>GOLDIE AGENCY PTE. LTD. | SEO & Digital Marketing</title>
+
+  <style>
+    /* Light/Dark Mode Transitions */
+    html {
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body {
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Scrollbar styling (Optional) */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: #f6f9fa;
+    }
+
+    /* Modal styles */
+    .modal {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    .modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body class="bg-seasalt-500 dark:bg-raisin_black-500 text-raisin_black-400 dark:text-white-500 font-roboto">
+
+<!--
+  ==============================
+  Navigation & Dark Mode Toggle
+  ==============================
+-->
+<header class="w-full p-4 flex items-center justify-between bg-seasalt-500 dark:bg-raisin_black-400 shadow">
+  <div class="flex items-center space-x-2">
+    <!-- Logo or Company Name -->
+    <span class="font-bold text-xl text-dodger_blue-500 dark:text-dodger_blue-600">GOLDIE AGENCY</span>
+  </div>
+
+  <div class="flex items-center space-x-4">
+    <!-- Dark Mode Toggle -->
+    <button 
+      id="darkModeToggle"
+      class="bg-dodger_blue-500 text-white-500 px-4 py-2 rounded hover:bg-dodger_blue-400 dark:hover:bg-dodger_blue-700 transition"
+    >
+      Toggle Dark/Light
+    </button>
+  </div>
+</header>
+
+<!--
+  =================
+  Hero Section
+  =================
+-->
+<section id="hero" class="relative w-full flex items-center justify-center py-20 bg-center bg-cover" style="background-image: url('https://placehold.co/1920x1080');">
+  <div class="absolute inset-0 bg-black bg-opacity-30 dark:bg-black dark:bg-opacity-50"></div>
+  <div class="relative z-10 text-center">
+    <h1 class="text-3xl md:text-5xl font-bold text-white-500 mb-4">Drive Traffic & Elevate Your Rankings</h1>
+    <p class="text-white-500 mb-6">Professional SEO Solutions for Guaranteed Online Success</p>
+    <a 
+      href="#services"
+      class="inline-block bg-dodger_blue-500 text-white-500 px-6 py-3 rounded-md font-medium hover:bg-dodger_blue-400 transition"
+    >
+      Our Services
+    </a>
+  </div>
+</section>
+
+<!--
+  ======================
+  Services Section
+  ======================
+-->
+<section id="services" class="py-16 container mx-auto px-4">
+  <div class="text-center mb-12">
+    <h2 class="text-2xl md:text-3xl font-semibold mb-4">Our Services</h2>
+    <p class="text-french_gray-400 dark:text-french_gray-600">Accelerate your growth with our specialized offerings.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Service 1 -->
+    <div class="p-6 bg-white-500 dark:bg-raisin_black-400 shadow rounded text-center transition hover:shadow-lg">
+      <span class="iconify text-4xl mb-4 text-dodger_blue-500" data-icon="mdi:web"></span>
+      <h3 class="text-xl font-semibold mb-2">On-Page SEO</h3>
+      <p class="text-sm text-french_gray-300 dark:text-white-400">
+        Optimize your pages for higher search engine rankings.
+      </p>
+    </div>
+    <!-- Service 2 -->
+    <div class="p-6 bg-white-500 dark:bg-raisin_black-400 shadow rounded text-center transition hover:shadow-lg">
+      <span class="iconify text-4xl mb-4 text-dodger_blue-500" data-icon="mdi:google-analytics"></span>
+      <h3 class="text-xl font-semibold mb-2">Analytics & Reporting</h3>
+      <p class="text-sm text-french_gray-300 dark:text-white-400">
+        Track and measure success with in-depth reports.
+      </p>
+    </div>
+    <!-- Service 3 -->
+    <div class="p-6 bg-white-500 dark:bg-raisin_black-400 shadow rounded text-center transition hover:shadow-lg">
+      <span class="iconify text-4xl mb-4 text-dodger_blue-500" data-icon="mdi:bullhorn"></span>
+      <h3 class="text-xl font-semibold mb-2">Digital Marketing</h3>
+      <p class="text-sm text-french_gray-300 dark:text-white-400">
+        Leverage multi-channel marketing campaigns for growth.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--
+  =======================
+  Portfolio Section
+  =======================
+-->
+<section id="portfolio" class="py-16 bg-seasalt-600 dark:bg-raisin_black-300">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4">Our Portfolio</h2>
+      <p class="text-french_gray-400 dark:text-french_gray-600">Check out some of our recent works.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="bg-white-500 dark:bg-raisin_black-400 rounded shadow hover:shadow-lg transition">
+        <img
+          class="w-full rounded-t"
+          src="https://placehold.co/400x300"
+          alt="Project Image"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2">Project Alpha</h3>
+          <p class="text-sm text-french_gray-300 dark:text-white-400">
+            A complete SEO overhaul for a leading e-commerce store.
+          </p>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="bg-white-500 dark:bg-raisin_black-400 rounded shadow hover:shadow-lg transition">
+        <img
+          class="w-full rounded-t"
+          src="https://placehold.co/400x300"
+          alt="Project Image"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2">Project Beta</h3>
+          <p class="text-sm text-french_gray-300 dark:text-white-400">
+            Successful content marketing strategy for a tech startup.
+          </p>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="bg-white-500 dark:bg-raisin_black-400 rounded shadow hover:shadow-lg transition">
+        <img
+          class="w-full rounded-t"
+          src="https://placehold.co/400x300"
+          alt="Project Image"
+        />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2">Project Gamma</h3>
+          <p class="text-sm text-french_gray-300 dark:text-white-400">
+            Comprehensive PPC and social media campaign for brand awareness.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+  ===========================
+  Testimonials Section
+  ===========================
+-->
+<section id="testimonials" class="py-16 container mx-auto px-4">
+  <div class="text-center mb-12">
+    <h2 class="text-2xl md:text-3xl font-semibold mb-4">Client Testimonials</h2>
+    <p class="text-french_gray-400 dark:text-french_gray-600">What our clients say about us.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Testimonial 1 -->
+    <div class="bg-white-500 dark:bg-raisin_black-400 shadow rounded p-6 text-center">
+      <img
+        class="mx-auto rounded-full mb-4 w-20 h-20"
+        src="https://avatar.iran.liara.run/public?100"
+        alt="Client Avatar"
+      />
+      <h3 class="font-semibold text-lg mb-2">John Doe</h3>
+      <p class="text-sm text-french_gray-300 dark:text-white-400">
+        “GOLDIE AGENCY boosted our rankings dramatically. Highly recommended!”
+      </p>
+    </div>
+    <!-- Testimonial 2 -->
+    <div class="bg-white-500 dark:bg-raisin_black-400 shadow rounded p-6 text-center">
+      <img
+        class="mx-auto rounded-full mb-4 w-20 h-20"
+        src="https://avatar.iran.liara.run/public?101"
+        alt="Client Avatar"
+      />
+      <h3 class="font-semibold text-lg mb-2">Jane Smith</h3>
+      <p class="text-sm text-french_gray-300 dark:text-white-400">
+        “Their analytics and reporting helped us make data-driven decisions.”
+      </p>
+    </div>
+    <!-- Testimonial 3 -->
+    <div class="bg-white-500 dark:bg-raisin_black-400 shadow rounded p-6 text-center">
+      <img
+        class="mx-auto rounded-full mb-4 w-20 h-20"
+        src="https://avatar.iran.liara.run/public?102"
+        alt="Client Avatar"
+      />
+      <h3 class="font-semibold text-lg mb-2">Alex Lee</h3>
+      <p class="text-sm text-french_gray-300 dark:text-white-400">
+        “A game-changer for our digital marketing efforts. Fantastic team!”
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--
+  =======================
+  Contact Section
+  =======================
+-->
+<section id="contact" class="py-16 bg-seasalt-600 dark:bg-raisin_black-300">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4">Get in Touch</h2>
+      <p class="text-french_gray-400 dark:text-french_gray-600">We’d love to hear from you.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Form -->
+      <form id="contactForm" class="bg-white-500 dark:bg-raisin_black-400 shadow rounded p-6">
+        <div class="mb-4">
+          <label class="block mb-2" for="name">Name *</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="w-full p-2 border border-french_gray-200 dark:border-french_gray-400 rounded"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2" for="email">Email *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="w-full p-2 border border-french_gray-200 dark:border-french_gray-400 rounded"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2" for="message">Message *</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            class="w-full p-2 border border-french_gray-200 dark:border-french_gray-400 rounded"
+            required
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-dodger_blue-500 text-white-500 px-6 py-2 rounded hover:bg-dodger_blue-400 transition"
+        >
+          Send Message
+        </button>
+      </form>
+
+      <!-- Map & Contact Info -->
+      <div class="flex flex-col space-y-4">
+        <div id="map" class="w-full h-64 rounded shadow bg-white-500 dark:bg-raisin_black-400"></div>
+        <div class="bg-white-500 dark:bg-raisin_black-400 shadow rounded p-6">
+          <h3 class="text-xl font-semibold mb-2">Contact Information</h3>
+          <p class="mb-2">GOLDIE AGENCY PTE. LTD.</p>
+          <p class="text-sm text-french_gray-300 dark:text-white-400">
+            123 Main Street, Singapore 048942
+          </p>
+          <p class="text-sm text-french_gray-300 dark:text-white-400">
+            Phone: +65 1234 5678
+          </p>
+          <p class="text-sm text-french_gray-300 dark:text-white-400">
+            Email: info@goldieagency.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+  ======================
+  Footer Section
+  ======================
+-->
+<footer class="bg-seasalt-700 dark:bg-raisin_black-300 py-8">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+    <!-- Company Logo & Copyright -->
+    <div class="flex flex-col items-center md:items-start">
+      <span class="font-bold text-xl text-dodger_blue-500 dark:text-dodger_blue-600 mb-1">GOLDIE AGENCY</span>
+      <span class="text-sm text-french_gray-300 dark:text-white-400">© 2024 GOLDIE AGENCY PTE. LTD. All Rights Reserved.</span>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="flex space-x-4">
+      <a href="#" class="text-dodger_blue-500 dark:text-dodger_blue-600 hover:text-dodger_blue-400">
+        <span class="iconify text-2xl" data-icon="mdi:facebook"></span>
+      </a>
+      <a href="#" class="text-dodger_blue-500 dark:text-dodger_blue-600 hover:text-dodger_blue-400">
+        <span class="iconify text-2xl" data-icon="mdi:twitter"></span>
+      </a>
+      <a href="#" class="text-dodger_blue-500 dark:text-dodger_blue-600 hover:text-dodger_blue-400">
+        <span class="iconify text-2xl" data-icon="mdi:linkedin"></span>
+      </a>
+    </div>
+
+    <!-- Legal Links (Open Modals) -->
+    <div class="flex space-x-4 text-sm">
+      <button class="legal-link underline" data-modal-target="#privacyPolicyModal">Privacy Policy</button>
+      <button class="legal-link underline" data-modal-target="#termsModal">Terms of Service</button>
+      <button class="legal-link underline" data-modal-target="#refundModal">Refund Policy</button>
+      <button class="legal-link underline" data-modal-target="#returnsModal">Returns Policy</button>
+      <button class="legal-link underline" data-modal-target="#cookiesModal">Cookies Settings</button>
+    </div>
+  </div>
+</footer>
+
+<!-- Legal Modals -->
+<div id="privacyPolicyModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+  <div class="bg-white-500 dark:bg-raisin_black-500 text-raisin_black-400 dark:text-white-500 w-full max-w-3xl rounded p-6 relative">
+    <button class="absolute top-4 right-4 text-2xl" data-modal-close="#privacyPolicyModal">✕</button>
+    <h2 class="text-xl font-semibold mb-2">Privacy Policy</h2>
+    <p class="text-sm mb-4">This is where your Privacy Policy would go.</p>
+  </div>
+</div>
+
+<div id="termsModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+  <div class="bg-white-500 dark:bg-raisin_black-500 text-raisin_black-400 dark:text-white-500 w-full max-w-3xl rounded p-6 relative">
+    <button class="absolute top-4 right-4 text-2xl" data-modal-close="#termsModal">✕</button>
+    <h2 class="text-xl font-semibold mb-2">Terms of Service</h2>
+    <p class="text-sm mb-4">This is where your Terms of Service would go.</p>
+  </div>
+</div>
+
+<div id="refundModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+  <div class="bg-white-500 dark:bg-raisin_black-500 text-raisin_black-400 dark:text-white-500 w-full max-w-3xl rounded p-6 relative">
+    <button class="absolute top-4 right-4 text-2xl" data-modal-close="#refundModal">✕</button>
+    <h2 class="text-xl font-semibold mb-2">Refund Policy</h2>
+    <p class="text-sm mb-4">This is where your Refund Policy would go.</p>
+  </div>
+</div>
+
+<div id="returnsModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+  <div class="bg-white-500 dark:bg-raisin_black-500 text-raisin_black-400 dark:text-white-500 w-full max-w-3xl rounded p-6 relative">
+    <button class="absolute top-4 right-4 text-2xl" data-modal-close="#returnsModal">✕</button>
+    <h2 class="text-xl font-semibold mb-2">Returns Policy</h2>
+    <p class="text-sm mb-4">This is where your Returns Policy would go.</p>
+  </div>
+</div>
+
+<div id="cookiesModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+  <div class="bg-white-500 dark:bg-raisin_black-500 text-raisin_black-400 dark:text-white-500 w-full max-w-3xl rounded p-6 relative">
+    <button class="absolute top-4 right-4 text-2xl" data-modal-close="#cookiesModal">✕</button>
+    <h2 class="text-xl font-semibold mb-2">Cookies Settings</h2>
+    <p class="text-sm mb-4">This is where your Cookies Settings information would go.</p>
+  </div>
+</div>
+
+<!-- 
+  * NON-BLOCKING JS 
+  * Contact form validation, map integration, color scheme toggle, etc.
+-->
+<script defer>
+  //===============================
+  // Dark Mode Toggle
+  //===============================
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  darkModeToggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    if (document.documentElement.classList.contains('dark')) {
+      localStorage.setItem('colorScheme', 'dark');
+    } else {
+      localStorage.setItem('colorScheme', 'light');
+    }
+  });
+
+  //===============================
+  // Modal Functionality
+  //===============================
+  const legalLinks = document.querySelectorAll('.legal-link');
+  const modalCloseButtons = document.querySelectorAll('[data-modal-close]');
+
+  legalLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const target = link.getAttribute('data-modal-target');
+      if (target) {
+        document.querySelector(target).classList.add('active');
+      }
+    });
+  });
+
+  modalCloseButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.getAttribute('data-modal-close');
+      if (target) {
+        document.querySelector(target).classList.remove('active');
+      }
+    });
+  });
+
+  // Close modal if clicked outside content
+  window.addEventListener('click', e => {
+    const activeModal = document.querySelector('.modal.active');
+    if (activeModal && e.target === activeModal) {
+      activeModal.classList.remove('active');
+    }
+  });
+
+  //===============================
+  // Contact Form Validation
+  //===============================
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', (event) => {
+    // Perform simple client-side validation
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
+      alert('Please fill out all required fields.');
+      event.preventDefault();
+    } else if (!validateEmail(emailInput.value)) {
+      alert('Please enter a valid email address.');
+      event.preventDefault();
+    } else {
+      alert('Your message has been sent!');
+    }
+  });
+
+  function validateEmail(email) {
+    // Basic email validation pattern
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+  }
+
+  //===============================
+  // Google Map Integration
+  //===============================
+  let map;
+  // Replace 'YOUR_API_KEY_HERE' with your Google Maps API key.
+  const googleMapsApiKey = 'YOUR_API_KEY_HERE';
+  // Insert the script element for Google Maps with callback to initMap
+  const mapsScript = document.createElement('script');
+  mapsScript.src = `https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&callback=initMap`;
+  mapsScript.async = true;
+  document.head.appendChild(mapsScript);
+
+  // Google Map callback
+  window.initMap = () => {
+    const agencyLocation = { lat: 1.28692, lng: 103.85457 }; // Example location in Singapore
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: agencyLocation,
+      zoom: 15,
+    });
+    new google.maps.Marker({
+      position: agencyLocation,
+      map: map,
+      title: 'GOLDIE AGENCY PTE. LTD.',
+    });
+  };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOLDIE AGENCY PTE. LTD. - SEO Company</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <script>
+    // Set TailwindCSS custom colors
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            seasalt: {
+              DEFAULT: '#F6F9FA',
+              100: '#233940',
+              200: '#467180',
+              300: '#75a4b3',
+              400: '#b5ced6',
+              500: '#f6f9fa',
+              600: '#f7fafb',
+              700: '#f9fbfc',
+              800: '#fbfcfd',
+              900: '#fdfefe',
+            },
+            french_gray: {
+              DEFAULT: '#AFB1B9',
+              100: '#222327',
+              200: '#43454d',
+              300: '#656874',
+              400: '#898c99',
+              500: '#afb1b9',
+              600: '#c0c1c8',
+              700: '#d0d1d6',
+              800: '#dfe0e3',
+              900: '#eff0f1',
+            },
+            white: {
+              DEFAULT: '#FFFFFF',
+              100: '#333333',
+              200: '#666666',
+              300: '#999999',
+              400: '#cccccc',
+              500: '#ffffff',
+              600: '#ffffff',
+              700: '#ffffff',
+              800: '#ffffff',
+              900: '#ffffff',
+            },
+            raisin_black: {
+              DEFAULT: '#322F40',
+              100: '#0a0a0d',
+              200: '#14131a',
+              300: '#1e1d27',
+              400: '#292634',
+              500: '#322f40',
+              600: '#57516e',
+              700: '#7c769a',
+              800: '#a8a4bb',
+              900: '#d3d1dd',
+            },
+            dodger_blue: {
+              DEFAULT: '#2791F3',
+              100: '#031d35',
+              200: '#063a6a',
+              300: '#09579f',
+              400: '#0c74d4',
+              500: '#2791f3',
+              600: '#51a6f5',
+              700: '#7dbcf7',
+              800: '#a8d2fa',
+              900: '#d4e9fc',
+            },
+          },
+        },
+      },
+    };
+
+    // Dark/Light Mode Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('theme-toggle');
+      const html = document.documentElement;
+
+      // Check user's preferred color scheme
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (prefersDark) html.classList.add('dark');
+
+      toggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+      });
+    });
+
+    // Google Maps API Key (Replace with your API Key)
+    const googleMapsApiKey = 'YOUR_GOOGLE_MAPS_API_KEY';
+  </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-seasalt-500 text-raisin_black-500 dark:bg-raisin_black-500 dark:text-seasalt-500">
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080');">
+    <div class="text-center">
+      <h1 class="text-6xl font-bold text-white dark:text-seasalt-500">Boost Your Online Presence</h1>
+      <p class="mt-4 text-xl text-white dark:text-seasalt-500">We help businesses grow with proven SEO strategies.</p>
+      <button class="mt-8 px-6 py-3 bg-dodger_blue-500 text-white rounded-lg hover:bg-dodger_blue-600">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div class="text-center">
+          <span class="iconify text-6xl text-dodger_blue-500" data-icon="mdi:search-web"></span>
+          <h3 class="mt-4 text-2xl font-bold">SEO Optimization</h3>
+          <p class="mt-2">Improve your website's visibility on search engines.</p>
+        </div>
+        <div class="text-center">
+          <span class="iconify text-6xl text-dodger_blue-500" data-icon="mdi:chart-bar"></span>
+          <h3 class="mt-4 text-2xl font-bold">Analytics</h3>
+          <p class="mt-2">Track and analyze your website's performance.</p>
+        </div>
+        <div class="text-center">
+          <span class="iconify text-6xl text-dodger_blue-500" data-icon="mdi:content-copy"></span>
+          <h3 class="mt-4 text-2xl font-bold">Content Marketing</h3>
+          <p class="mt-2">Create engaging content to attract your audience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="py-20 bg-french_gray-100 dark:bg-raisin_black-600">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center">Our Portfolio</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div class="bg-white dark:bg-raisin_black-500 p-6 rounded-lg shadow-lg">
+          <img src="https://placehold.co/600x400" alt="Project 1" class="rounded-lg">
+          <h3 class="mt-4 text-2xl font-bold">Project 1</h3>
+          <p class="mt-2">A successful SEO campaign for a local business.</p>
+        </div>
+        <div class="bg-white dark:bg-raisin_black-500 p-6 rounded-lg shadow-lg">
+          <img src="https://placehold.co/600x400" alt="Project 2" class="rounded-lg">
+          <h3 class="mt-4 text-2xl font-bold">Project 2</h3>
+          <p class="mt-2">Content marketing strategy for an e-commerce site.</p>
+        </div>
+        <div class="bg-white dark:bg-raisin_black-500 p-6 rounded-lg shadow-lg">
+          <img src="https://placehold.co/600x400" alt="Project 3" class="rounded-lg">
+          <h3 class="mt-4 text-2xl font-bold">Project 3</h3>
+          <p class="mt-2">SEO optimization for a global brand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center">What Our Clients Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div class="text-center">
+          <img src="https://avatar-placeholder.iran.liara.run/?id=1" alt="Client 1" class="w-24 h-24 rounded-full mx-auto">
+          <h3 class="mt-4 text-2xl font-bold">John Doe</h3>
+          <p class="mt-2">"Goldie Agency helped us double our website traffic!"</p>
+        </div>
+        <div class="text-center">
+          <img src="https://avatar-placeholder.iran.liara.run/?id=2" alt="Client 2" class="w-24 h-24 rounded-full mx-auto">
+          <h3 class="mt-4 text-2xl font-bold">Jane Smith</h3>
+          <p class="mt-2">"Their content marketing strategy was a game-changer for us."</p>
+        </div>
+        <div class="text-center">
+          <img src="https://avatar-placeholder.iran.liara.run/?id=3" alt="Client 3" class="w-24 h-24 rounded-full mx-auto">
+          <h3 class="mt-4 text-2xl font-bold">Mike Johnson</h3>
+          <p class="mt-2">"Professional and reliable SEO services. Highly recommended!"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20 bg-french_gray-100 dark:bg-raisin_black-600">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center">Contact Us</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div>
+          <form class="bg-white dark:bg-raisin_black-500 p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+              <label for="name" class="block text-sm font-medium">Name</label>
+              <input type="text" id="name" class="mt-1 p-2 w-full rounded-lg border border-french_gray-500">
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium">Email</label>
+              <input type="email" id="email" class="mt-1 p-2 w-full rounded-lg border border-french_gray-500">
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-sm font-medium">Message</label>
+              <textarea id="message" rows="4" class="mt-1 p-2 w-full rounded-lg border border-french_gray-500"></textarea>
+            </div>
+            <button type="submit" class="px-6 py-3 bg-dodger_blue-500 text-white rounded-lg hover:bg-dodger_blue-600">Submit</button>
+          </form>
+        </div>
+        <div>
+          <div class="bg-white dark:bg-raisin_black-500 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold">Our Location</h3>
+            <div id="map" class="mt-4 h-64 rounded-lg"></div>
+            <p class="mt-4">123 Business Street, Singapore 123456</p>
+            <p class="mt-2">Phone: +65 1234 5678</p>
+            <p class="mt-2">Email: info@goldieagency.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="py-10 bg-raisin_black-500 text-seasalt-500">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-bold">GOLDIE AGENCY PTE. LTD.</h3>
+          <p class="mt-2">© 2023 All Rights Reserved.</p>
+        </div>
+        <div class="mt-6 md:mt-0">
+          <a href="#" class="mx-2 hover:text-dodger_blue-500">Privacy Policy</a>
+          <a href="#" class="mx-2 hover:text-dodger_blue-500">Terms of Service</a>
+          <a href="#" class="mx-2 hover:text-dodger_blue-500">Refund Policy</a>
+          <a href="#" class="mx-2 hover:text-dodger_blue-500">Returns Policy</a>
+          <a href="#" class="mx-2 hover:text-dodger_blue-500">Cookies Settings</a>
+        </div>
+        <div class="mt-6 md:mt-0">
+          <a href="#" class="mx-2 hover:text-dodger_blue-500"><span class="iconify text-2xl" data-icon="mdi:facebook"></span></a>
+          <a href="#" class="mx-2 hover:text-dodger_blue-500"><span class="iconify text-2xl" data-icon="mdi:twitter"></span></a>
+          <a href="#" class="mx-2 hover:text-dodger_blue-500"><span class="iconify text-2xl" data-icon="mdi:linkedin"></span></a>
+          <a href="#" class="mx-2 hover:text-dodger_blue-500"><span class="iconify text-2xl" data-icon="mdi:instagram"></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dark/Light Mode Toggle Button -->
+  <button id="theme-toggle" class="fixed bottom-4 right-4 p-3 bg-dodger_blue-500 text-white rounded-full shadow-lg">
+    <span class="iconify text-2xl" data-icon="mdi:theme-light-dark"></span>
+  </button>
+
+  <!-- Google Maps Script -->
+  <script>
+    function initMap() {
+      const location = { lat: 1.3521, lng: 103.8198 }; // Singapore coordinates
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: location,
+      });
+      new google.maps.Marker({
+        position: location,
+        map: map,
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+</body>
+</html>
