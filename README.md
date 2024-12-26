@@ -8,6 +8,8 @@ This project evaluates the effectiveness of different AI models in generating we
 - **Claude 3.5 Sonnet**: Anthropic's language model
 - **DeepSeek v3**: DeepSeek's language model
 
+You can see the output on [GitHub Pages](https://unlimitedbytes.github.io/ai-compare/).
+
 ### Prompting Techniques
 
 1. **Human Prompt** (`my-prompt/`)
